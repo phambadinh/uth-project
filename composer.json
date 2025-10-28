@@ -1,0 +1,27 @@
+{
+    "name": "uth-university/learning-system",
+    "description": "UTH Learning Management System - Coursera Style",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UTH Development Team",
+            "email": "dev@uth.edu.vn"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "tecnickcom/tcpdf": "^6.6",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "UTH\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"copy('.env.example', '.env');\""
+        ]
+    }
+}
